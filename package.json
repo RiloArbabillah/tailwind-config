@@ -1,0 +1,18 @@
+{
+  "name": "tailwind-config",
+  "version": "1.0.0",
+  "description": "Generate your tailwind extend configuration based on api",
+  "main": "bin/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rilo Arbabillah <rilo.arbabillah@gmail.com>",
+  "license": "MIT",
+  "bin": {
+    "tran": "./bin/index.js"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.7",
+    "yargs": "^17.5.1"
+  }
+}
