@@ -9,10 +9,11 @@
   "author": "Rilo Arbabillah <rilo.arbabillah@gmail.com>",
   "license": "MIT",
   "bin": {
-    "tran": "./bin/index.js"
+    "tc": "./bin/index.js"
   },
   "dependencies": {
     "node-fetch": "^2.6.7",
+    "replace-in-file": "^6.3.5",
     "yargs": "^17.5.1"
   }
 }

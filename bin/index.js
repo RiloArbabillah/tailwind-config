@@ -1,25 +1,25 @@
 #! /usr/bin/env node
 const yargs = require("yargs");
-const fetch = require("node-fetch");
+const utils = require('./utils.js')
+var argv = require('yargs/yargs')(process.argv.slice(2)).argv;
+
+const usage = "\nUsage: tc <lang_name> sentence to be translated";
+yargs
+.usage(usage)
+// .option("l", {alias:"languages", describe: "List all supported languages.", type: "boolean", demandOption: false })
+.help(true)
+.argv;
+
+// if (yargs.argv.s) {
+//       process.stdout.write(yargs.argv.fr ? 'Le perroquet dit: ' : 'The parrot says: ');
+//   }
+//   console.log(
+//       (yargs.argv.fr ? 'couac' : 'squawk') + (yargs.argv.p ? '!' : '')
+//   );
+console.log(argv._)
+
 console.log("Hello World!");
 
-const usage = "\nUsage: tran <lang_name> sentence to be translated";const options = yargs  
-      .usage(usage)  
-      .option("l", {alias:"languages", describe: "List all supported languages.", type: "boolean", demandOption
-: false })                                                                                                    
-      .help(true)  
-      .argv;
-
 // var sentence = utils.parseSentence(yargs.argv._);
-
-const fetchData = async() => {
-    // import('node-fetch').then( async({default: fetch}) => {
-    //     body = await response.text()
-    // })
-    const response = await fetch('https://tepra.kaltimprov.go.id/api/public/list-pilihan');
-    const body = await response.text();
-    console.log(body);
-}
-
-fetchData();
-console.log('done')
+// utils.fetchData('https://tepra.kaltimprov.go.id/api/public/list-pilihan');
+// console.log('done')
